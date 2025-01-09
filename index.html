@@ -4,12 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Judithya Dwimanda - Profil Pribadi</title>
-  
+
   <!-- Link ke Bootstrap CSS CDN -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Link ke file CSS kustom (nanti kita buat) -->
+  <!-- Link ke file CSS kustom -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Font Awesome untuk ikon sosial media -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <!-- Navbar -->
@@ -31,29 +34,27 @@
   </nav>
 
   <!-- Hero Section -->
-  <header class="hero text-white text-center py-5" style="background: linear-gradient(to right, #004f77, #0073a6);">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4">
-          <img src="assets/images/fotoprofil.webp" alt="Judithya Dwimanda" class="img-fluid rounded-circle shadow">
+  <header class="hero text-white py-5" style="background: linear-gradient(to right, #004f77, #0073a6);">
+    <div class="container" style="max-width: 1000px;">
+      <div class="row align-items-center">
+        <div class="col-md-4 text-center">
+          <img src="assets/images/fotoprofil.webp" alt="Judithya Dwimanda" class="img-fluid rounded-circle shadow" style="max-width: 150px;">
         </div>
-        <div class="col-lg-8 d-flex align-items-center">
+        <div class="col-md-8 text-center text-md-left">
+          <h1>Halo, saya Judithya Dwimanda!</h1>
+          <p class="lead">Web Developer | Teknologi | Desain</p>
+          <p>Selamat datang di halaman profil saya! Saya seorang pengembang web dengan ketertarikan pada teknologi dan desain kreatif.</p>
+          <!-- Social Media Links -->
           <div>
-            <h1>Halo, saya Judithya Dwimanda!</h1>
-            <p class="lead">Web Developer | Teknologi | Desain</p>
-            <p>Selamat datang di halaman profil saya! Saya seorang pengembang web dengan ketertarikan pada teknologi dan desain kreatif.</p>
-            <!-- Social Media Links -->
-            <div>
-              <a href="https://facebook.com" target="_blank" class="btn btn-outline-light btn-sm mr-2">
-                <i class="fab fa-facebook"></i> Facebook
-              </a>
-              <a href="https://instagram.com" target="_blank" class="btn btn-outline-light btn-sm mr-2">
-                <i class="fab fa-instagram"></i> Instagram
-              </a>
-              <a href="https://bsky.app" target="_blank" class="btn btn-outline-light btn-sm">
-                <i class="fab fa-twitter"></i> BlueSky
-              </a>
-            </div>
+            <a href="https://facebook.com" target="_blank" class="btn btn-outline-light btn-sm mr-2">
+              <i class="fab fa-facebook"></i> Facebook
+            </a>
+            <a href="https://instagram.com" target="_blank" class="btn btn-outline-light btn-sm mr-2">
+              <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a href="https://bsky.app" target="_blank" class="btn btn-outline-light btn-sm">
+              <i class="fab fa-twitter"></i> BlueSky
+            </a>
           </div>
         </div>
       </div>
@@ -61,7 +62,7 @@
   </header>
 
   <!-- About Section -->
-  <section id="about" class="container my-5">
+  <section id="about" class="container my-5" style="max-width: 1000px;">
     <h2 class="text-center text-primary">Tentang Saya</h2>
     <p class="lead text-center">Saya seorang web developer dengan lebih dari 5 tahun pengalaman dalam membangun aplikasi web dan desain antarmuka yang user-friendly.</p>
     <p class="text-center">Saya juga memiliki pengalaman dalam pengembangan full-stack dan menikmati belajar teknologi terbaru.</p>
@@ -69,7 +70,7 @@
 
   <!-- Contact Section -->
   <section id="contact" class="bg-light py-5">
-    <div class="container">
+    <div class="container" style="max-width: 1000px;">
       <h2 class="text-center text-primary">Hubungi Saya</h2>
       <form>
         <div class="form-row">
@@ -93,15 +94,14 @@
 
   <!-- Footer -->
   <footer class="bg-dark text-white text-center py-4">
-    <p>&copy; 2025 Judithya Dwimanda. All rights reserved.</p>
+    <div style="max-width: 1000px; margin: 0 auto;">
+      <p>&copy; 2025 Judithya Dwimanda. All rights reserved.</p>
+    </div>
   </footer>
 
   <!-- Bootstrap JS dan jQuery -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  
-  <!-- Font Awesome untuk icon sosial media -->
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 </html>
