@@ -8,11 +8,78 @@
   <!-- Link ke Bootstrap CSS CDN -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
+  <!-- Link ke Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
   <!-- Link ke file CSS kustom -->
   <link rel="stylesheet" href="css/style.css">
 
   <!-- Font Awesome untuk ikon sosial media -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f0f4f8;
+    }
+
+    .hero {
+      background: linear-gradient(to right, rgba(0, 79, 119, 0.8), rgba(0, 115, 166, 0.8)), url('assets/images/hero-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero .container {
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero h1, .hero p {
+      color: #fff;
+    }
+
+    .btn-outline-light {
+      border-color: #ffa500;
+      color: #ffa500;
+    }
+
+    .btn-outline-light:hover {
+      background-color: #ffa500;
+      color: #fff;
+    }
+
+    #about {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    #contact {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(8px);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      backdrop-filter: blur(5px);
+      border-top: 3px solid #ffa500;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
 </head>
 <body>
   <!-- Navbar -->
@@ -34,7 +101,7 @@
   </nav>
 
   <!-- Hero Section -->
-  <header class="hero text-white py-5" style="background: linear-gradient(to right, #004f77, #0073a6);">
+  <header class="hero text-white py-5">
     <div class="container" style="max-width: 1000px;">
       <div class="row align-items-center">
         <div class="col-md-4 text-center">
