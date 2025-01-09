@@ -21,8 +21,9 @@
     body {
       font-family: 'Poppins', sans-serif;
       background-color: #f0f4f8;
+      scroll-behavior: smooth;
     }
-
+  
     .hero {
       background: linear-gradient(to right, rgba(0, 79, 119, 0.8), rgba(0, 115, 166, 0.8)), url('assets/images/kantor.webp');
       background-size: cover;
@@ -30,53 +31,42 @@
       position: relative;
       overflow: hidden;
       color: #fff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-
+  
     .hero .container {
-      backdrop-filter: blur(10px);
-      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(7px);
+      background: rgba(255, 255, 255, 0.2);
       border-radius: 15px;
+      margin: 0 20px 0 20px;
       padding: 20px;
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     }
-
+  
     .hero h1, .hero p {
       color: #fff;
     }
-
+  
     .btn-outline-light {
       border-color: #ffa500;
       color: #ffa500;
     }
-
+  
     .btn-outline-light:hover {
       background-color: #ffa500;
       color: #fff;
     }
-
-    #about {
-      background: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(10px);
-      border-radius: 15px;
-      padding: 30px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    }
-
-    #contact {
-      background: rgba(255, 255, 255, 0.9);
-      backdrop-filter: blur(8px);
-      border-radius: 15px;
-      padding: 30px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    }
-
+  
     footer {
       background: rgba(0, 0, 0, 0.8);
       color: #fff;
       backdrop-filter: blur(5px);
       border-top: 3px solid #ffa500;
     }
-
+  
     footer p {
       margin: 0;
     }
@@ -91,11 +81,11 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#about">Tentang Saya</a>
+        <li class="nav-item">
+          <a class="nav-link" href="/portofolio">Portofolio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#contact">Hubungi Saya</a>
+          <a class="nav-link" href="/kontak">Kontak</a>
         </li>
       </ul>
     </div>
@@ -124,41 +114,7 @@
               <i class="fab fa-twitter"></i> BlueSky
             </a>
           </div>
-        </div>
-      </div>
-    </div>
   </header>
-
-  <!-- About Section -->
-  <section id="about" class="container my-5" style="max-width: 1000px;">
-    <h2 class="text-center text-primary">Tentang Saya</h2>
-    <p class="lead text-center">Saya seorang web developer dengan lebih dari 5 tahun pengalaman dalam membangun aplikasi web dan desain antarmuka yang user-friendly.</p>
-    <p class="text-center">Saya juga memiliki pengalaman dalam pengembangan full-stack dan menikmati belajar teknologi terbaru.</p>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="bg-light py-5">
-    <div class="container" style="max-width: 1000px;">
-      <h2 class="text-center text-primary">Hubungi Saya</h2>
-      <form>
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="name">Nama</label>
-            <input type="text" class="form-control" id="name" placeholder="Nama Anda">
-          </div>
-          <div class="form-group col-md-6">
-            <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="Email Anda">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="message">Pesan</label>
-          <textarea class="form-control" id="message" rows="4" placeholder="Pesan Anda"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary btn-block">Kirim Pesan</button>
-      </form>
-    </div>
-  </section>
 
   <!-- Footer -->
   <footer class="bg-dark text-white text-center py-4">
