@@ -1,9 +1,25 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Judithya Dwimanda's Profile - SEO Specialist</title>
+    <meta name="description" content="An SEO specialist believes it's essential to conduct thorough analysis and stay informed about the latest search engine algorithm updates.">
+
+    <meta property="og:title" content="Judithya Dwimanda's Profile - SEO Specialist">
+    <meta property="og:description" content="An SEO specialist believes it's essential to conduct thorough analysis and stay informed about the latest search engine algorithm updates.">
+    <meta property="og:image" content="assets/images/fotoprofil.webp">
+
+    <meta property="og:url" content="https://judwm.github.io/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Judithya Dwimanda's Profile - SEO Specialist">
+    <meta name="twitter:description" content="An SEO specialist believes it's essential to conduct thorough analysis and stay informed about the latest search engine algorithm updates.">
+    <meta name="twitter:image" content="assets/images/fotoprofil.webp">
+
+    <meta name="author" content="Judithya Dwimanda">
+    <meta name="keywords" content="SEO Specialist, Technical SEO, Keyword Research, Analytics, SEO Expert, Judithya Dwimanda, SEO Indonesia, Google SEO, Digital Marketing">
+    <meta name="robots" content="index, follow">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
@@ -126,7 +142,7 @@
     <div class="bg-accent py-20" id="kontak">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-3xl font-bold text-white mb-8">Let's Collaborate</h2>
-        <p class="text-light text-xl mb-8">Interested in working together? Let’s discuss your project and bring your vision to life." This phrasing adds a more inviting tone and encourages action. Let me know if you'd like any tweaks!</p>
+        <p class="text-light text-xl mb-8">Interested in working together? Let's discuss your project and bring your vision to life.</p>
         <a href="mailto:judith.dwm@gmail.com" class="inline-block bg-white text-accent2 px-8 py-3 rounded-md font-medium hover:bg-light transition-colors material-shadow relative 
             hover:before:content-['\40'] hover:before:font-awesome hover:before:mr-2
             before:opacity-0 hover:before:opacity-100 before:translate-x-[-10px] hover:before:translate-x-0 before:transition-all before:duration-300"> Mail Me </a>
@@ -152,11 +168,9 @@
       mobileMenuButton.addEventListener('click', toggleMobileMenu);
       mobileMenuClose.addEventListener('click', toggleMobileMenu);
       menuOverlay.addEventListener('click', toggleMobileMenu);
-      // Close mobile menu when clicking on links
       mobileMenuLinks.forEach(link => {
         link.addEventListener('click', () => {
           toggleMobileMenu();
-          // Smooth scroll to section
           const targetId = link.getAttribute('href');
           document.querySelector(targetId).scrollIntoView({
             behavior: 'smooth'
