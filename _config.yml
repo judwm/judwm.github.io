@@ -55,12 +55,8 @@ defaults:
 
 # Jekyll Admin Config
 jekyll_admin:
-  hidden_links:
-    - posts
-    - pages
-    - staticfiles
-    - datafiles
-    - configuration
+  homepage: "pages"
+  hidden_links: []
 
 # Exclude from processing.
 # The following items will not be processed, by default.
