@@ -31,6 +31,7 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-admin
 
 # Collections
 collections:
@@ -51,6 +52,15 @@ defaults:
       path: ""
     values:
       layout: "default"
+
+# Jekyll Admin Config
+jekyll_admin:
+  hidden_links:
+    - posts
+    - pages
+    - staticfiles
+    - datafiles
+    - configuration
 
 # Exclude from processing.
 # The following items will not be processed, by default.
