@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="og:image" content="{{ site.url }}/assets/images/fotoprofil.webp">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="twitter:image" content="{{ site.url }}/assets/images/fotoprofil.webp">
+
+    <meta name="author" content="Judithya Dwimanda">
+    <meta name="keywords" content="{{ page.keywords | default: 'SEO Specialist, Technical SEO, Keyword Research, Analytics, SEO Expert, Judithya Dwimanda, SEO Indonesia, Google SEO, Digital Marketing' }}">
+    <meta name="robots" content="index, follow">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#6c584c',
+              secondary: '#a98467',
+              accent: '#adc178',
+              accent2: '#59634e',
+              light: '#dde5b6',
+              background: '#f0ead2',
+            }
+          }
+        }
+      }
+    </script>
+    {% seo %}
+  </head>
+  <body class="bg-background min-h-screen">
+    {% include header.html %}
+    {{ content }}
+    {% include footer.html %}
+    {% include scripts.html %}
+  </body>
+</html>

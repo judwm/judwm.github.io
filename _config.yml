@@ -1,0 +1,20 @@
+title: Judithya Dwimanda's Profile
+description: SEO Specialist Portfolio Website
+baseurl: ""
+url: "https://judwm.github.io"
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-admin
+
+# Jekyll Admin Config
+jekyll_admin:
+  hidden_links:
+    - posts
+    - pages
+    - staticfiles
+    - datafiles
+    - configuration
