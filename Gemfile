@@ -3,6 +3,7 @@ ruby "3.4.1"
 
 gem "jekyll", "~> 4.3.2"
 gem "minima"
+gem "logger"
 
 group :jekyll_plugins do
   gem "jekyll-feed"
