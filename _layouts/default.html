@@ -13,6 +13,7 @@
             <a href="{{ '/' | relative_url }}">Home</a>
             <a href="{{ '/about' | relative_url }}">About</a>
             <a href="{{ '/blog' | relative_url }}">Blog</a>
+            <div data-netlify-identity-button></div>
         </nav>
     </header>
 
@@ -24,16 +25,6 @@
         <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
     </footer>
 
-    <script>
-        if (window.netlifyIdentity) {
-            window.netlifyIdentity.on("init", user => {
-                if (!user) {
-                    window.netlifyIdentity.on("login", () => {
-                        document.location.href = "/admin/";
-                    });
-                }
-            });
-        }
-    </script>
+    <script src="{{ '/assets/js/netlify-identity.js' | relative_url }}"></script>
 </body>
 </html>
