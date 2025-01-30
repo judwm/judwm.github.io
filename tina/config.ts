@@ -1,37 +1,30 @@
 import { defineConfig } from "tinacms";
 
 // Your hosting provider likely exposes this as an environment variable
-const branch =
-  process.env.GITHUB_BRANCH ||
-  process.env.VERCEL_GIT_COMMIT_REF ||
-  process.env.HEAD ||
-  "main";
+const branch = process.env.HEAD || "main";
 
 export default defineConfig({
   branch,
-
-  // Get this from tina.io
-  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
-  // Get this from tina.io
-  token: process.env.TINA_TOKEN,
+  clientId: "ad9e4b1d-897b-47b4-84c3-87501f31f358", // Your client ID
+  token: "c2937635c9defc5e9eb2e7ca698094d8c683ae7a",
 
   build: {
     outputFolder: "admin",
-    publicFolder: "public",
+    publicFolder: "_site",
   },
   media: {
     tina: {
-      mediaRoot: "",
-      publicFolder: "public",
+      mediaRoot: "uploads",
+      publicFolder: "_site",
     },
   },
-  // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/schema/
   schema: {
     collections: [
       {
         name: "post",
         label: "Posts",
-        path: "content/posts",
+        path: "_posts",
+        format: "md",
         fields: [
           {
             type: "string",
@@ -39,6 +32,19 @@ export default defineConfig({
             label: "Title",
             isTitle: true,
             required: true,
+          },
+          {
+            type: "datetime",
+            name: "date",
+            label: "Date",
+            required: true,
+          },
+          {
+            type: "string",
+            name: "layout",
+            label: "Layout",
+            required: true,
+            options: ["post"],
           },
           {
             type: "rich-text",
