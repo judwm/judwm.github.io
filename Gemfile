@@ -1,11 +1,13 @@
 source "https://rubygems.org"
-ruby "3.4.1"
+ruby "3.2.2"
 
 gem "jekyll", "~> 4.3.2"
 gem "webrick", "~> 1.8"
 gem "liquid", "~> 4.0.4"
 gem "kramdown", "~> 2.4.0"
 gem "mercenary", "~> 0.4.0"
+gem "csv"
+gem "logger"
 
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.17"
