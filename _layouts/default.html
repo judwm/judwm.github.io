@@ -6,6 +6,9 @@
     <title>{{ page.title }} - {{ site.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    {% if site.data.global.header-footer.theme %}
+        <link rel="stylesheet" href="/admin/css/themes/{{ site.data.global.header-footer.theme }}.css">
+    {% endif %}
 </head>
 <body>
     <header>

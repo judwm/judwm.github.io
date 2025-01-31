@@ -1,0 +1,31 @@
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+    
+  testimonials:
+    output: true
+    permalink: /testimonials/:name/
+    
+  team:
+    output: true
+    permalink: /team/:name/
+    
+  products:
+    output: true
+    permalink: /products/:name/
+    
+  events:
+    output: true
+    permalink: /events/:name/
+    
+  faqs:
+    output: true
+    permalink: /faq/:name/
+    
+defaults:
+  - scope:
+      path: "_pages"
+      type: "pages"
+    values:
+      layout: "page" 
