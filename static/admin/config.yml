@@ -47,13 +47,13 @@ collections:
     editor:
       preview: true
     fields:
-      - { label: "Judul", name: "title", widget: "string" }
-      - { label: "Penulis", name: "author", widget: "string", default: "Admin" }
-      - { label: "Tanggal", name: "date", widget: "datetime" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Author", name: "author", widget: "string", default: "Admin" }
+      - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Featured Image", name: "image", widget: "image", required: false }
-      - { label: "Kategori", name: "category", widget: "select", options: ["News", "Tutorial", "Update"] }
-      - { label: "Ringkasan", name: "excerpt", widget: "text" }
-      - { label: "Konten", name: "body", widget: "markdown" }
+      - { label: "Category", name: "category", widget: "select", options: ["News", "Tutorial", "Update"] }
+      - { label: "Excerpt", name: "excerpt", widget: "text" }
+      - { label: "Content", name: "body", widget: "markdown" }
       - label: "SEO Settings"
         name: "seo"
         widget: "object"
@@ -69,7 +69,7 @@ collections:
     fields:
       - { label: "Judul Halaman", name: "title", widget: "string" }
       - { label: "Tata Letak", name: "layout", widget: "hidden", default: "page" }
-      - { label: "Konten", name: "body", widget: "markdown" }
+      - { label: "Content", name: "body", widget: "markdown" }
       - label: "Pengaturan Tambahan"
         name: "settings"
         widget: "object"
@@ -98,8 +98,8 @@ collections:
     fields:
       - { label: "Judul Gambar", name: "title", widget: "string" }
       - { label: "Gambar", name: "image", widget: "image" }
-      - { label: "Kategori", name: "category", widget: "select", options: ["Portfolio", "Banner", "Clients"] }
-      - { label: "Deskripsi", name: "description", widget: "text" }
+      - { label: "Category", name: "category", widget: "select", options: ["Portfolio", "Banner", "Clients"] }
+      - { label: "Description", name: "description", widget: "text" }
 
   - name: "navigation"
     label: "Navigation Menu"
@@ -200,4 +200,123 @@ collections:
     fields:
       - { label: "Question", name: "question", widget: "string" }
       - { label: "Answer", name: "answer", widget: "markdown" }
-      - { label: "Category", name: "category", widget: "select", options: ["General", "Payment", "Technical"] } 
+      - { label: "Category", name: "category", widget: "select", options: ["General", "Payment", "Technical"] }
+
+  - name: "site_settings"
+    label: "Site Settings"
+    files:
+      - name: "general"
+        label: "General Settings"
+        file: "_data/settings.yml"
+        fields:
+          - { label: "Site Name", name: "site_name", widget: "string" }
+          - { label: "Site Description", name: "description", widget: "text" }
+          - label: "Contact Information"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Phone", name: "phone", widget: "string" }
+              - { label: "Address", name: "address", widget: "text" }
+          - label: "Analytics"
+            name: "analytics"
+            widget: "object"
+            fields:
+              - { label: "Google Analytics ID", name: "google_analytics", widget: "string", required: false }
+              - { label: "Facebook Pixel ID", name: "facebook_pixel", widget: "string", required: false }
+          - label: "Custom Scripts"
+            name: "scripts"
+            widget: "list"
+            required: false
+            fields:
+              - { label: "Script Name", name: "name", widget: "string" }
+              - { label: "Script Code", name: "code", widget: "text" }
+
+  - name: "portfolio"
+    label: "Portfolio Projects"
+    folder: "_portfolio"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Project Date", name: "date", widget: "datetime" }
+      - { label: "Client", name: "client", widget: "string" }
+      - label: "Technologies"
+        name: "technologies"
+        widget: "select"
+        multiple: true
+        options: ["HTML/CSS", "JavaScript", "React", "Vue", "Node.js", "Python", "Ruby", "PHP"]
+      - { label: "Project URL", name: "project_url", widget: "string", required: false }
+      - { label: "Description", name: "body", widget: "markdown" }
+      - label: "Gallery"
+        name: "gallery"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Caption", name: "caption", widget: "string" }
+
+  - name: "announcements"
+    label: "Announcements"
+    folder: "_announcements"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "End Date", name: "end_date", widget: "datetime", required: false }
+      - { label: "Priority", name: "priority", widget: "select", options: ["High", "Medium", "Low"] }
+      - { label: "Type", name: "type", widget: "select", options: ["Info", "Warning", "Success", "Alert"] }
+      - { label: "Content", name: "body", widget: "markdown" }
+      - { label: "Show Banner", name: "show_banner", widget: "boolean", default: false }
+
+  - name: "menus"
+    label: "Navigation Menus"
+    files:
+      - name: "main_menu"
+        label: "Main Menu"
+        file: "_data/menus/main.yml"
+        fields:
+          - label: "Menu Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+              - { label: "Icon", name: "icon", widget: "string", required: false, hint: "FontAwesome icon name" }
+              - label: "Submenu Items"
+                name: "items"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+
+# Theme Configuration
+site_customization:
+  name: "theme_settings"
+  label: "Theme Customization"
+  file: "_data/theme.yml"
+  fields:
+    - label: "Colors"
+      name: "colors"
+      widget: "object"
+      fields:
+        - { label: "Primary Color", name: "primary", widget: "string", hint: "Hex color code (#000000)" }
+        - { label: "Secondary Color", name: "secondary", widget: "string" }
+        - { label: "Text Color", name: "text", widget: "string" }
+        - { label: "Background Color", name: "background", widget: "string" }
+    - label: "Typography"
+      name: "typography"
+      widget: "object"
+      fields:
+        - { label: "Heading Font", name: "heading_font", widget: "select", options: ["Arial", "Roboto", "Open Sans", "Montserrat"] }
+        - { label: "Body Font", name: "body_font", widget: "select", options: ["Arial", "Roboto", "Open Sans", "Montserrat"] }
+        - { label: "Base Font Size", name: "base_size", widget: "number", value_type: "int", min: 14, max: 18 }
+    - label: "Layout"
+      name: "layout"
+      widget: "object"
+      fields:
+        - { label: "Container Width", name: "container_width", widget: "select", options: ["Wide", "Boxed"] }
+        - { label: "Sidebar Position", name: "sidebar_position", widget: "select", options: ["Left", "Right", "None"] } 

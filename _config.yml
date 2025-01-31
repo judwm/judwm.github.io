@@ -23,9 +23,27 @@ collections:
     output: true
     permalink: /faq/:name/
     
+  portfolio:
+    output: true
+    permalink: /portfolio/:slug/
+    
+  announcements:
+    output: true
+    permalink: /announcements/:slug/
+    
 defaults:
   - scope:
       path: "_pages"
       type: "pages"
     values:
-      layout: "page" 
+      layout: "page"
+  - scope:
+      path: "_portfolio"
+      type: "portfolio"
+    values:
+      layout: "portfolio"
+  - scope:
+      path: "_announcements"
+      type: "announcements"
+    values:
+      layout: "announcement" 
