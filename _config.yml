@@ -57,8 +57,11 @@ number_of_posts: 5
 markdown: kramdown
 highlighter: rouge
 sass:
-  sass_dir: _sass
   style: compressed
+  sass_dir: _sass
+  load_paths:
+    - _sass
+    - node_modules
 
 include:
   - _redirects
