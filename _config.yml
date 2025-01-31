@@ -58,6 +58,7 @@ number_of_posts: 5
 markdown: kramdown
 highlighter: rouge
 sass:
+  sass_dir: _sass
   style: compressed
 
 include:

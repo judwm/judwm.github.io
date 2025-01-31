@@ -6,6 +6,7 @@ GEM
     bigdecimal (3.1.9)
     colorator (1.1.0)
     concurrent-ruby (1.3.5)
+    csv (3.3.2)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
@@ -54,6 +55,7 @@ GEM
     listen (3.9.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
+    logger (1.6.5)
     mercenary (0.4.0)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
@@ -81,6 +83,7 @@ PLATFORMS
   x64-mingw-ucrt
 
 DEPENDENCIES
+  csv
   jekyll (~> 4.3.2)
   jekyll-feed (~> 0.17)
   jekyll-postfiles
@@ -88,6 +91,7 @@ DEPENDENCIES
   jekyll-sitemap
   kramdown (~> 2.4.0)
   liquid (~> 4.0.4)
+  logger
   mercenary (~> 0.4.0)
   tzinfo (~> 2.0)
   tzinfo-data
