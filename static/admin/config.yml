@@ -2,296 +2,50 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "static/images/uploads"
-public_folder: "/images/uploads"
+media_folder: "assets/uploads"
+public_folder: "/uploads"
 
-css:
-  - label: "Dark Theme"
-    value: "dark"
-    file: "admin/css/themes/dark.css"
-  - label: "Minimal Theme"
-    value: "minimal"
-    file: "admin/css/themes/minimal.css"
-
-# Fitur Tema Custom
-theme:
-  - label: "Tema Default"
-    value: "default"
-  - label: "Tema Gelap"
-    value: "dark"
-  - label: "Tema Minimalis"
-    value: "minimal"
-
-# Pengaturan Global
 collections:
-  - name: "global"
-    label: "Global Settings"
-    editor:
-      preview: false
-    files:
-      - name: "header_footer"
-        label: "Header & Footer Settings"
-        file: "_data/global/header-footer.yml"
-        fields:
-          - { name: "site_title", label: "Site Title", widget: "string" }
-          - { name: "logo", label: "Site Logo", widget: "image", config: { media_library: { allow_multiple: false } } }
-          - { name: "header_content", label: "Header Content", widget: "markdown", required: false }
-          - { name: "footer_content", label: "Footer Content", widget: "markdown", required: false }
-          - { name: "theme", label: "Site Theme", widget: "select", options: ["default", "dark", "minimal"] }
-
-  - name: "blog"
-    label: "Blog"
+  - name: "posts"
+    label: "Blog Posts"
     folder: "_posts"
     create: true
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
       preview: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Author", name: "author", widget: "string", default: "Admin" }
-      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Featured Image", name: "image", widget: "image", required: false }
       - { label: "Category", name: "category", widget: "select", options: ["News", "Tutorial", "Update"] }
-      - { label: "Excerpt", name: "excerpt", widget: "text" }
-      - { label: "Content", name: "body", widget: "markdown" }
-      - label: "SEO Settings"
-        name: "seo"
-        widget: "object"
-        fields:
-          - { label: "Meta Title", name: "meta_title", widget: "string", required: false }
-          - { label: "Meta Description", name: "meta_description", widget: "text", required: false }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "pages"
-    label: "Halaman Statis"
+    label: "Pages"
     folder: "_pages"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Judul Halaman", name: "title", widget: "string" }
-      - { label: "Tata Letak", name: "layout", widget: "hidden", default: "page" }
-      - { label: "Content", name: "body", widget: "markdown" }
-      - label: "Pengaturan Tambahan"
-        name: "settings"
-        widget: "object"
-        fields:
-          - { label: "Tampilkan di Menu", name: "show_in_menu", widget: "boolean", default: true }
-          - { label: "Urutan Menu", name: "menu_order", widget: "number", default: 0 }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
+      - { label: "Body", name: "body", widget: "markdown" }
 
-  - name: "seo_settings"
-    label: "Pengaturan SEO"
+  - name: "config"
+    label: "Site Configuration"
     editor:
       preview: false
-    files:
-      - name: "global_seo"
-        label: "SEO Global"
-        file: "content/global/seo.md"
-        fields:
-          - { label: "Meta Description Default", name: "meta_description", widget: "text" }
-          - { label: "Keywords", name: "keywords", widget: "list" }
-          - { label: "Google Analytics ID", name: "ga_id", widget: "string", required: false }
-
-  - name: "gallery"
-    label: "Galeri"
-    folder: "content/gallery"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Judul Gambar", name: "title", widget: "string" }
-      - { label: "Gambar", name: "image", widget: "image" }
-      - { label: "Category", name: "category", widget: "select", options: ["Portfolio", "Banner", "Clients"] }
-      - { label: "Description", name: "description", widget: "text" }
-
-  - name: "navigation"
-    label: "Navigation Menu"
-    editor:
-      preview: false
-    files:
-      - name: "main_menu"
-        label: "Main Menu"
-        file: "_data/navigation.yml"
-        fields:
-          - label: "Menu Text"
-            name: "menu_items"
-            widget: "list"
-            fields:
-              - { label: "Teks Menu", name: "name", widget: "string" }
-              - { label: "Link", name: "url", widget: "string" }
-              - { label: "Open in New Tab", name: "new_tab", widget: "boolean", default: false }
-
-  - name: "social_media"
-    label: "Social Media"
-    editor:
-      preview: false
-    files:
-      - name: "social_links"
-        label: "Social Media Links"
-        file: "_data/social.yml"
-        fields:
-          - label: "Platform Name"
-            name: "links"
-            widget: "list"
-            fields:
-              - { label: "Nama Platform", name: "platform", widget: "string" }
-              - { label: "URL Profil", name: "url", widget: "string" }
-              - { label: "Ikon (Font Awesome)", name: "icon", widget: "string", hint: "Contoh: fa-facebook" }
-
-  - name: "testimonials"
-    label: "Testimonials"
-    folder: "_testimonials"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Client Name", name: "name", widget: "string" }
-      - { label: "Position", name: "position", widget: "string" }
-      - { label: "Company", name: "company", widget: "string", required: false }
-      - { label: "Avatar", name: "avatar", widget: "image", required: false }
-      - { label: "Quote", name: "content", widget: "text" }
-      - { label: "Featured", name: "featured", widget: "boolean", default: false }
-
-  - name: "team"
-    label: "Team Members"
-    folder: "_team"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Full Name", name: "name", widget: "string" }
-      - { label: "Position", name: "position", widget: "string" }
-      - { label: "Photo", name: "photo", widget: "image" }
-      - { label: "Bio", name: "content", widget: "markdown" }
-      - label: "Social Links"
-        name: "social"
-        widget: "object"
-        fields:
-          - { label: "Twitter", name: "twitter", widget: "string", required: false }
-          - { label: "LinkedIn", name: "linkedin", widget: "string", required: false }
-
-  - name: "products"
-    label: "Products/Services"
-    folder: "_products"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Product Name", name: "title", widget: "string" }
-      - { label: "Featured Image", name: "image", widget: "image" }
-      - { label: "Price", name: "price", widget: "number", value_type: "float" }
-      - { label: "Description", name: "description", widget: "markdown" }
-      - { label: "Category", name: "category", widget: "select", options: ["Physical", "Digital", "Service"] }
-      - { label: "Featured Product", name: "featured", widget: "boolean", default: false }
-
-  - name: "events"
-    label: "Events"
-    folder: "_events"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Event Name", name: "title", widget: "string" }
-      - { label: "Start Date", name: "start_date", widget: "datetime" }
-      - { label: "End Date", name: "end_date", widget: "datetime", required: false }
-      - { label: "Location", name: "location", widget: "string" }
-      - { label: "Featured Image", name: "image", widget: "image" }
-      - { label: "Registration Link", name: "registration_url", widget: "string", required: false }
-      - { label: "Event Details", name: "body", widget: "markdown" }
-
-  - name: "faqs"
-    label: "FAQs"
-    folder: "_faqs"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Question", name: "question", widget: "string" }
-      - { label: "Answer", name: "answer", widget: "markdown" }
-      - { label: "Category", name: "category", widget: "select", options: ["General", "Payment", "Technical"] }
-
-  - name: "site_settings"
-    label: "Site Settings"
     files:
       - name: "general"
-        label: "General Settings"
+        label: "Site Settings"
         file: "_data/settings.yml"
         fields:
-          - { label: "Site Name", name: "site_name", widget: "string" }
+          - { label: "Site Title", name: "title", widget: "string" }
           - { label: "Site Description", name: "description", widget: "text" }
-          - label: "Contact Information"
-            name: "contact"
-            widget: "object"
-            fields:
-              - { label: "Email", name: "email", widget: "string" }
-              - { label: "Phone", name: "phone", widget: "string" }
-              - { label: "Address", name: "address", widget: "text" }
-          - label: "Analytics"
-            name: "analytics"
-            widget: "object"
-            fields:
-              - { label: "Google Analytics ID", name: "google_analytics", widget: "string", required: false }
-              - { label: "Facebook Pixel ID", name: "facebook_pixel", widget: "string", required: false }
-          - label: "Custom Scripts"
-            name: "scripts"
-            widget: "list"
-            required: false
-            fields:
-              - { label: "Script Name", name: "name", widget: "string" }
-              - { label: "Script Code", name: "code", widget: "text" }
-
-  - name: "portfolio"
-    label: "Portfolio Projects"
-    folder: "_portfolio"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image" }
-      - { label: "Project Date", name: "date", widget: "datetime" }
-      - { label: "Client", name: "client", widget: "string" }
-      - label: "Technologies"
-        name: "technologies"
-        widget: "select"
-        multiple: true
-        options: ["HTML/CSS", "JavaScript", "React", "Vue", "Node.js", "Python", "Ruby", "PHP"]
-      - { label: "Project URL", name: "project_url", widget: "string", required: false }
-      - { label: "Description", name: "body", widget: "markdown" }
-      - label: "Gallery"
-        name: "gallery"
-        widget: "list"
-        required: false
-        fields:
-          - { label: "Image", name: "image", widget: "image" }
-          - { label: "Caption", name: "caption", widget: "string" }
-
-  - name: "announcements"
-    label: "Announcements"
-    folder: "_announcements"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "End Date", name: "end_date", widget: "datetime", required: false }
-      - { label: "Priority", name: "priority", widget: "select", options: ["High", "Medium", "Low"] }
-      - { label: "Type", name: "type", widget: "select", options: ["Info", "Warning", "Success", "Alert"] }
-      - { label: "Content", name: "body", widget: "markdown" }
-      - { label: "Show Banner", name: "show_banner", widget: "boolean", default: false }
-
-  - name: "menus"
-    label: "Navigation Menus"
-    files:
-      - name: "main_menu"
-        label: "Main Menu"
-        file: "_data/menus/main.yml"
-        fields:
-          - label: "Menu Items"
-            name: "items"
-            widget: "list"
-            fields:
-              - { label: "Label", name: "label", widget: "string" }
-              - { label: "URL", name: "url", widget: "string" }
-              - { label: "Icon", name: "icon", widget: "string", required: false, hint: "FontAwesome icon name" }
-              - label: "Submenu Items"
-                name: "items"
-                widget: "list"
-                required: false
-                fields:
-                  - { label: "Label", name: "label", widget: "string" }
-                  - { label: "URL", name: "url", widget: "string" }
+          - { label: "Logo", name: "logo", widget: "image", required: false }
+          - { label: "Email", name: "email", widget: "string", required: false }
+          - { label: "Phone", name: "phone", widget: "string", required: false }
 
 # Theme Configuration
 site_customization:
