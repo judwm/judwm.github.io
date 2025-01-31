@@ -1,46 +1,55 @@
-title: Judwm | Judithya Dwimanda's Profile
-description: Profile dan Blog pribadi Judithya Dwimanda
+# Site settings
+title: Klise Theme # site title
+description: >- # site description
+  He's writing in Bahasa about web technology and experience as a journal 
+  for documentation things that he learned, meet him <a href="https://github.com/piharpi" target="_blank" rel="noopener">@github</a>.
 lang: en-US # default lang
 timezone: Asia/Jakarta # set your timezone
 image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
-repo: https://github.com/judwm/judwm.github.io # site repo [optional]
+repo: https://github.com/piharpi/jekyll-klise # site repo [optional]
 mode: dark # default theme "dark" | "light"
 
 # Profile settings
 author:
-  name: Judith Я Dwimanda # author name
+  name: Jekyll Klisé # author name
   bio: >- # tell to the world
-    SEO Specialist | Content Writer | Production Planner and Inventory Control
-  username: username # author username
-  github: github_username
-  twitter: twitter_username
-  email: your-email@email.com
+    The minimalist Jekyll theme, light and dark mode support, for running a personal site and blog, 
+    meet Klisé theme at <a href="https://github.com/piharpi/jekyll-klise" target="_blank" rel="noopener">@github</a>.
+  username: username # general username
+  github: github_username # github username
+  twitter: twitter_username # twitter username
+  facebook: facebook_username # facebook username
+  email: your-email@email.com # email adress
   avatar: /assets/img/avatar.jpg # change with your own avatar
 
 # URL settings
-baseurl: "" # site subpath, e.g. /blog
-url: "" # site url
-permalink: /:title/ # permalink link format
+url: "https://klise.now.sh" #
+baseurl:
+permalink: /:title/
+google_analytics: # leave it blank if not wish
+fb_appid:
 
+# Collection setting
 collections:
-  pages:
+  posts:
     output: true
-    permalink: /:path/
-    
+
+# Markdown settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  syntax_highlighter: rouge
+
+# Default front matter
 defaults:
   - scope:
-      path: "_pages"
-      type: "pages"
+      path: ""
     values:
-      layout: "page"
-  - scope:
-      path: "_posts"
-      type: "posts"
-    values:
-      layout: "post"
+      layout: post
+      comments: false
 
 # Jekyll Compose default front matter
-jekyll-compose:
+jekyll_compose:
   post_default_front_matter:
     modified:
     tags: []
@@ -54,11 +63,9 @@ jekyll-compose:
 number_of_posts: 5
 
 # Build settings
-markdown: kramdown
-highlighter: rouge
+# theme: klise
 sass:
   style: compressed
-  sass_dir: _sass
 
 include:
   - _redirects
@@ -83,4 +90,3 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-postfiles
-  - jekyll-seo-tag
