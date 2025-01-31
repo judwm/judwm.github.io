@@ -15,6 +15,8 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Categories", name: "categories", widget: "list", required: false}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
       
@@ -26,3 +28,61 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "projects"
+    label: "Projects"
+    folder: "_projects"
+    create: true
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "project"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
+      - {label: "Project URL", name: "project_url", widget: "string", required: false}
+      - {label: "Technologies", name: "technologies", widget: "list"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "authors"
+    label: "Authors"
+    folder: "_authors"
+    create: true
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "author"}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Display Name", name: "display_name", widget: "string"}
+      - {label: "Position", name: "position", widget: "string"}
+      - {label: "Avatar", name: "avatar", widget: "image"}
+      - {label: "Email", name: "email", widget: "string", required: false}
+      - {label: "Web", name: "web", widget: "string", required: false}
+      - {label: "Bio", name: "bio", widget: "text"}
+
+  - name: "settings"
+    label: "Settings"
+    files:
+      - name: "navigation"
+        label: "Navigation"
+        file: "_data/navigation.yml"
+        fields:
+          - label: "Navigation Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "Label", name: "label", widget: "string"}
+              - {label: "URL", name: "url", widget: "string"}
+
+      - name: "site"
+        label: "Site Settings"
+        file: "_data/settings.yml"
+        fields:
+          - {label: "Site Title", name: "title", widget: "string"}
+          - {label: "Site Description", name: "description", widget: "text"}
+          - {label: "Author", name: "author", widget: "string"}
+          - {label: "Logo", name: "logo", widget: "image", required: false}
+          - label: "Social Media"
+            name: "social"
+            widget: "object"
+            fields:
+              - {label: "Twitter", name: "twitter", widget: "string", required: false}
+              - {label: "GitHub", name: "github", widget: "string", required: false}
+              - {label: "LinkedIn", name: "linkedin", widget: "string", required: false}
+              - {label: "Instagram", name: "instagram", widget: "string", required: false}
