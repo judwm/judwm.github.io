@@ -59,9 +59,6 @@ highlighter: rouge
 sass:
   style: compressed
   sass_dir: _sass
-  load_paths:
-    - _sass
-    - node_modules
 
 include:
   - _redirects
