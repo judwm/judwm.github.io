@@ -5,8 +5,13 @@ date: 2025-01-30 15:55:43 +0700
 categories: blog
 ---
 
-Welcome to my new blog! This is my first post using Jekyll with Decap CMS.
+Hello everyone! Welcome to my personal blog. This is where I'll be sharing my thoughts, experiences, and insights about technology, programming, and personal development.
 
-## What's Next?
+## What to Expect
 
-I'll be sharing interesting content here soon. Stay tuned!
+In this blog, you can expect:
+- Technical articles and tutorials
+- Personal experiences and learnings
+- Project updates and showcases
+
+Stay tuned for more content coming soon!

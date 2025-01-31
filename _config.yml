@@ -3,34 +3,6 @@ collections:
     output: true
     permalink: /:path/
     
-  testimonials:
-    output: true
-    permalink: /testimonials/:name/
-    
-  team:
-    output: true
-    permalink: /team/:name/
-    
-  products:
-    output: true
-    permalink: /products/:name/
-    
-  events:
-    output: true
-    permalink: /events/:name/
-    
-  faqs:
-    output: true
-    permalink: /faq/:name/
-    
-  portfolio:
-    output: true
-    permalink: /portfolio/:slug/
-    
-  announcements:
-    output: true
-    permalink: /announcements/:slug/
-    
 defaults:
   - scope:
       path: "_pages"
@@ -42,13 +14,3 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-  - scope:
-      path: "_portfolio"
-      type: "portfolio"
-    values:
-      layout: "portfolio"
-  - scope:
-      path: "_announcements"
-      type: "announcements"
-    values:
-      layout: "announcement" 

@@ -4,20 +4,18 @@ title: Home
 ---
 
 <div class="home">
-  <h1>Welcome to {{ site.title }}</h1>
+  <div class="intro">
+    <h1>Welcome to My Blog</h1>
+    <p>Thoughts, experiences, and insights about technology and development.</p>
+  </div>
   
   <div class="posts">
     {% for post in site.posts %}
     <article class="post">
-      <h2>
-        <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      </h2>
-      <div class="post-meta">
-        {{ post.date | date: "%B %d, %Y" }}
-      </div>
-      <div class="post-excerpt">
-        {{ post.excerpt }}
-      </div>
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <div class="post-meta">{{ post.date | date: "%B %d, %Y" }}</div>
+      <div class="post-excerpt">{{ post.excerpt }}</div>
+      <a href="{{ post.url | relative_url }}" class="read-more">Read More →</a>
     </article>
     {% endfor %}
   </div>
