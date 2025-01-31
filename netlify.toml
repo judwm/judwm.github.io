@@ -4,6 +4,7 @@
 
 [build.environment]
   RUBY_VERSION = "3.2.2"
+  JEKYLL_ENV = "production"
 
 [[plugins]]
   package = "@netlify/plugin-sitemap"
@@ -14,3 +15,8 @@
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
+
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404

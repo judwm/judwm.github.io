@@ -19,9 +19,9 @@ author:
   avatar: /assets/img/avatar.jpg # change with your own avatar
 
 # URL settings
-url: "https://judwm.github.io" # Domain Name of host. [username].github.io for github pages
-baseurl: "" # sub folder for jekyll site. only if jekyll site not in root of host. leave blank if not wishd. always add / in front.
-permalink: /:title/
+baseurl: "" # site subpath, e.g. /blog
+url: "" # site url
+permalink: /:title/ # permalink link format
 
 collections:
   pages:
