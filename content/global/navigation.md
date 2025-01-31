@@ -1,0 +1,12 @@
+---
+menu_items:
+  - name: "Home"
+    url: "/"
+    new_tab: false
+  - name: "Blog"
+    url: "/blog"
+    new_tab: false
+  - name: "Contact"
+    url: "/contact"
+    new_tab: false
+--- 

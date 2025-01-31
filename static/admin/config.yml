@@ -25,19 +25,19 @@ theme:
 # Pengaturan Global
 collections:
   - name: "global"
-    label: "Pengaturan Global"
+    label: "Global Settings"
     editor:
       preview: false
     files:
       - name: "header_footer"
-        label: "Header & Footer"
+        label: "Header & Footer Settings"
         file: "content/global/header-footer.md"
         fields:
-          - { name: "site_title", label: "Judul Situs", widget: "string" }
-          - { name: "logo", label: "Logo Situs", widget: "image", config: { media_library: { allow_multiple: false } } }
-          - { name: "header_content", label: "Konten Header", widget: "markdown", required: false }
-          - { name: "footer_content", label: "Konten Footer", widget: "markdown", required: false }
-          - { name: "theme", label: "Tema Situs", widget: "select", options: ["default", "dark", "minimal"] }
+          - { name: "site_title", label: "Site Title", widget: "string" }
+          - { name: "logo", label: "Site Logo", widget: "image", config: { media_library: { allow_multiple: false } } }
+          - { name: "header_content", label: "Header Content", widget: "markdown", required: false }
+          - { name: "footer_content", label: "Footer Content", widget: "markdown", required: false }
+          - { name: "theme", label: "Site Theme", widget: "select", options: ["default", "dark", "minimal"] }
 
   - name: "blog"
     label: "Blog"
@@ -51,7 +51,7 @@ collections:
       - { label: "Penulis", name: "author", widget: "string", default: "Admin" }
       - { label: "Tanggal", name: "date", widget: "datetime" }
       - { label: "Featured Image", name: "image", widget: "image", required: false }
-      - { label: "Kategori", name: "category", widget: "select", options: ["Berita", "Tutorial", "Update"] }
+      - { label: "Kategori", name: "category", widget: "select", options: ["News", "Tutorial", "Update"] }
       - { label: "Ringkasan", name: "excerpt", widget: "text" }
       - { label: "Konten", name: "body", widget: "markdown" }
       - label: "SEO Settings"
@@ -59,4 +59,78 @@ collections:
         widget: "object"
         fields:
           - { label: "Meta Title", name: "meta_title", widget: "string", required: false }
-          - { label: "Meta Description", name: "meta_description", widget: "text", required: false } 
+          - { label: "Meta Description", name: "meta_description", widget: "text", required: false }
+
+  - name: "pages"
+    label: "Halaman Statis"
+    folder: "content/pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Judul Halaman", name: "title", widget: "string" }
+      - { label: "Tata Letak", name: "layout", widget: "hidden", default: "page" }
+      - { label: "Konten", name: "body", widget: "markdown" }
+      - label: "Pengaturan Tambahan"
+        name: "settings"
+        widget: "object"
+        fields:
+          - { label: "Tampilkan di Menu", name: "show_in_menu", widget: "boolean", default: true }
+          - { label: "Urutan Menu", name: "menu_order", widget: "number", default: 0 }
+
+  - name: "seo_settings"
+    label: "Pengaturan SEO"
+    editor:
+      preview: false
+    files:
+      - name: "global_seo"
+        label: "SEO Global"
+        file: "content/global/seo.md"
+        fields:
+          - { label: "Meta Description Default", name: "meta_description", widget: "text" }
+          - { label: "Keywords", name: "keywords", widget: "list" }
+          - { label: "Google Analytics ID", name: "ga_id", widget: "string", required: false }
+
+  - name: "gallery"
+    label: "Galeri"
+    folder: "content/gallery"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Judul Gambar", name: "title", widget: "string" }
+      - { label: "Gambar", name: "image", widget: "image" }
+      - { label: "Kategori", name: "category", widget: "select", options: ["Portfolio", "Banner", "Clients"] }
+      - { label: "Deskripsi", name: "description", widget: "text" }
+
+  - name: "navigation"
+    label: "Navigation Menu"
+    editor:
+      preview: false
+    files:
+      - name: "main_menu"
+        label: "Main Menu"
+        file: "content/global/navigation.md"
+        fields:
+          - label: "Menu Text"
+            name: "menu_items"
+            widget: "list"
+            fields:
+              - { label: "Teks Menu", name: "name", widget: "string" }
+              - { label: "Link", name: "url", widget: "string" }
+              - { label: "Open in New Tab", name: "new_tab", widget: "boolean", default: false }
+
+  - name: "social_media"
+    label: "Social Media"
+    editor:
+      preview: false
+    files:
+      - name: "social_links"
+        label: "Social Media Links"
+        file: "content/global/social.md"
+        fields:
+          - label: "Platform Name"
+            name: "links"
+            widget: "list"
+            fields:
+              - { label: "Nama Platform", name: "platform", widget: "string" }
+              - { label: "URL Profil", name: "url", widget: "string" }
+              - { label: "Ikon (Font Awesome)", name: "icon", widget: "string", hint: "Contoh: fa-facebook" } 
