@@ -1,3 +1,28 @@
+title: Your Blog Title # site title
+description: >- # site description
+  A minimalist Jekyll theme for running a personal site or blog
+lang: en-US # default lang
+timezone: Asia/Jakarta # set your timezone
+image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
+repo: https://github.com/judwm/judwm.github.io # site repo [optional]
+mode: dark # default theme "dark" | "light"
+
+# Profile settings
+author:
+  name: Your Name # author name
+  bio: >- # tell to the world
+    A minimalist Jekyll theme for running a personal site or blog.
+  username: username # author username
+  github: github_username
+  twitter: twitter_username
+  email: your-email@email.com
+  avatar: /assets/img/avatar.jpg # change with your own avatar
+
+# URL settings
+url: "https://judwm.github.io" # Domain Name of host. [username].github.io for github pages
+baseurl: "" # sub folder for jekyll site. only if jekyll site not in root of host. leave blank if not wishd. always add / in front.
+permalink: /:title/
+
 collections:
   pages:
     output: true
@@ -14,3 +39,48 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+
+# Jekyll Compose default front matter
+jekyll-compose:
+  post_default_front_matter:
+    modified:
+    tags: []
+    description:
+  draft_default_front_matter:
+    modified:
+    tags: []
+    description:
+
+# Homepage limit posts
+number_of_posts: 5
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+sass:
+  style: compressed
+
+include:
+  - _redirects
+  - .htaccess
+
+exclude:
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - CHANGELOG.md
+  - README.md
+  - node_modules
+  - CODE_OF_CONDUCT.md
+  - CONTRIBUTING.md
+  - lighthouse.png
+  - klise-*.gem
+  - klise.gemspec
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-postfiles
+  - jekyll-seo-tag
