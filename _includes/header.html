@@ -7,6 +7,7 @@
   <meta name="application-name" content="{{ site.title }}" />
   <meta name="apple-mobile-web-app-status-bar-style" content="#fff" />
   <meta name="apple-mobile-web-app-title" content="{{ site.title }}" />
+  <link rel="canonical" href="https://judwm.netlify.app{{ page.url }}" />
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <title>
     {% if page.title %}{{ page.title | escape }} - {{ site.title }}{% else %}{{
@@ -18,12 +19,6 @@
       page.url | remove: 'index.html' | remove: '.html' | absolute_url
     }}"
     hreflang="{{ site.lang }}"
-  />
-  <link
-    rel="canonical"
-    href="{{
-      page.url  | remove: 'index.html' | remove: '.html' | absolute_url
-    }}"
   />
   {% if paginator.previous_page %}
   <link
