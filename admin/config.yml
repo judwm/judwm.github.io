@@ -7,30 +7,31 @@ backend:
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
-# Konfigurasi tampilan yang lebih sederhana
-publish_mode: simple
-editor:
-  preview: false
-
 collections:
   - name: "post"
-    label: "Blog Post"
+    label: "Post"
     folder: "_posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm"}
       - {label: "Description", name: "description", widget: "text", required: false}
-      - {label: "Tags", name: "tags", widget: "list", required: false, allow_add: true}
-      - {label: "Content", name: "body", widget: "markdown"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
+      - {label: "Featured Image", name: "image", widget: "image", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "page"
-    label: "Pages"
+    label: "Page"
     folder: "/"
     create: true
+    filter: {field: "layout", value: "page"}
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Content", name: "body", widget: "markdown"}
+      - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+editor:
+  preview: true

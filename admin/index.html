@@ -2,8 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta name="robots" content="noindex" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Content Manager</title>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script>
@@ -11,47 +10,6 @@
       window.location.replace("https://judwm.netlify.app/admin/");
     }
   </script>
-  <style>
-    /* Improve mobile responsiveness */
-    body {
-      margin: 0;
-      padding: 0;
-    }
-    #nc-root {
-      width: 100vw !important;
-      height: 100vh !important;
-      overflow: auto !important;
-    }
-    /* Fix editor on mobile */
-    .css-1hvrgvd-CollectionContainer,
-    .css-1f7nhiq-CollectionMain {
-      padding: 0 !important;
-    }
-    .css-1hvrgvd-CollectionContainer {
-      width: 100% !important;
-    }
-    /* Improve button and input sizes on mobile */
-    button, input, select, textarea {
-      font-size: 16px !important; /* Prevents iOS zoom on focus */
-    }
-    /* Fix markdown editor on mobile */
-    .CodeMirror {
-      height: auto !important;
-      min-height: 300px;
-    }
-    /* Improve sidebar navigation on mobile */
-    @media (max-width: 799px) {
-      .css-1hvrgvd-CollectionContainer {
-        position: relative !important;
-        width: 100% !important;
-        max-height: none !important;
-      }
-      .css-1f7nhiq-CollectionMain {
-        margin-left: 0 !important;
-        padding: 20px !important;
-      }
-    }
-  </style>
 </head>
 <body>
   <!-- Include the script that builds the page and powers Netlify CMS -->
