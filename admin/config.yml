@@ -1,34 +1,36 @@
 backend:
   name: git-gateway
-  branch: main # Branch to update
+  branch: main
   site_url: https://judwm.netlify.app
   display_url: https://judwm.netlify.app
 
-media_folder: "assets/uploads" # Media files will be stored in the repo under assets/uploads
-public_folder: "/assets/uploads" # The src attribute for uploaded media will begin with /assets/uploads
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+# Konfigurasi tampilan yang lebih sederhana
+publish_mode: simple
+editor:
+  preview: false
 
 collections:
-  - name: "post" # Used in routes, e.g., /admin/collections/blog
-    label: "Post" # Used in the UI
-    folder: "_posts" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template
-    fields: # The fields for each document
+  - name: "post"
+    label: "Blog Post"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm"}
       - {label: "Description", name: "description", widget: "text", required: false}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Tags", name: "tags", widget: "list", required: false}
-      - {label: "Featured Image", name: "image", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list", required: false, allow_add: true}
+      - {label: "Content", name: "body", widget: "markdown"}
 
   - name: "page"
-    label: "Page"
-    folder: "/" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    filter: {field: "layout", value: "page"}
+    label: "Pages"
+    folder: "/"
+    create: true
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "text", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Content", name: "body", widget: "markdown"}
