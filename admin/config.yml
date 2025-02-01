@@ -1,6 +1,8 @@
 backend:
   name: git-gateway
   branch: main # Branch to update
+  site_url: https://judwm.netlify.app
+  display_url: https://judwm.netlify.app
 
 media_folder: "assets/uploads" # Media files will be stored in the repo under assets/uploads
 public_folder: "/assets/uploads" # The src attribute for uploaded media will begin with /assets/uploads
