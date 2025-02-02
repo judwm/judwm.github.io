@@ -8,14 +8,29 @@ description: Judith, seorang SEO Specialist yang masih sering belajar hal baru.
   Dia juga mampu mengerjakan berbagai pekerjaan administratif lainnya secara
   profesional. Tidak baperan dan tidak merokok.
 ---
-**Kata hukum termodinamika, energi itu ga bisa diciptain atau dimusnahin. Cuma bisa diubah. Jadi saya mikir. Daripada energi negatifnya dipendem atau dikeluhin, mending diubah jadi yang bermanfaat. Hidup udah susah, ga perlu ditambahin sampah energi lagi.**
+Menurut hukum termodinamika, energi gak bisa diciptain atau dimusnahin. Cuma bisa diubah saja. Prinsip ini yang sedang saya pegang. Daripada menyimpan energi negatif, saya lebih milih untuk mengubahnya jadi hal produktif.
 
-Inilah yang membuat saya mikir, dan minimal sedikit termotivasi. Selama jadi pengangguran, ga ada pemasukan. *Apply* sana sini makin sulit karena masuk *kepala tiga* dan lulusan terakhir cuma SMK.
+Hidup emang berat. Tapi kenapa harus ditambahin sampah energi?
 
-Perkenalkan saya Judith. Seorang yang mampu membantu kamu dalam berbagai hal. Baik pekerjaan fisik, maupun yang berkaitan dengan kreativitas dan strategi.
+Nama saya Judith. Seorang *multipotentialite* yang bisa bantu kamu dalam berbagai bidang. Mulai dari pekerjaan fisik, administrasi, sampai yang butuh kreatifitas dan strategi.
 
-Dari urusan yang praktis sampai harus mikir banget, saya siap membantu. 😁
+## Kenapa saya bisa jadi solusi buat kamu?
 
-Meskipun sekarang belum ada pekerjaan full-time, tapi saya masih mengerjakan berbagai side-job yang bisa membuat saya lebih produktif.
+Jadi gini,
 
-[Kontak saya](/contact/) ya, untuk bisa ngobrol lebih lanjut 📌
+**Saya fleksibel**: bisa kerja lapangan atau remote, sesuai kebutuhan
+
+**Punya multi-skill**: gabungan kemampuan teknis dan kreatif, seperti: 
+
+* 💀 Penulisan konten & SEO
+* 💀 Riset mendalam (deep research)
+* 💀 Desain konten visual
+* 💀 Administrasi dan manajemen data
+
+**Disiplin dan jujur:** Walaupun belum punya gelar profesional, saya prioritaskan komitmen dan transparansi.
+
+## Lagi apa sekarang?
+
+Walaupun sekarang belum ada pekerjaan *full-time* lagi yang *nyantol*, saya aktif mengerjakan side-job dan mengerjakan project kecil-kecilan yang bisa dilihat di portofolio saya. Percaya aja, proses kecil yang dibangun hari ini, bisa jadi pondasi besar kedepannya.
+
+*Saya mungkin bukan yang terbaik, tapi saya bisa jadi yang paling bersemangat buat belajar dan kasih hasil maksimal. Hehe* 🥰
