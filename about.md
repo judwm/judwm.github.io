@@ -31,7 +31,7 @@ Jadi gini,
 
 ## Lagi apa sekarang?
 
-Walaupun sekarang belum ada pekerjaan *full-time* lagi yang *nyantol*, saya aktif mengerjakan side-job dan mengerjakan project kecil-kecilan yang bisa dilihat di [portofolio saya](/portofolio/). Percaya aja, proses kecil yang dibangun hari ini, bisa jadi pondasi besar kedepannya.
+Meskipun sekarang belum ada pekerjaan *full-time* lagi yang *nyantol*, saya aktif mengerjakan *side-job* dan *project* kecil-kecilan yang bisa dilihat di [portofolio saya](/portofolio/). Percaya aja, proses kecil yang dibangun hari ini, bisa jadi pondasi besar kedepannya.
 
 *Saya mungkin bukan yang terbaik, tapi saya bisa jadi yang paling bersemangat buat belajar dan kasih hasil maksimal. Hehe* 🥰
 
