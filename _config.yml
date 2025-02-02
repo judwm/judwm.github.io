@@ -29,6 +29,9 @@ fb_appid:
 collections:
   posts:
     output: true
+  portfolio:
+    output: true
+    permalink: /portfolio/:path/
 
 # Markdown settings
 markdown: kramdown
