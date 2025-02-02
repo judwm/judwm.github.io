@@ -1,0 +1,125 @@
+---
+layout: default
+---
+
+<style>
+.portfolio-detail {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.portfolio-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.portfolio-header h1 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.portfolio-meta {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.portfolio-image {
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.portfolio-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.portfolio-content {
+  line-height: 1.8;
+}
+
+.portfolio-content h2 {
+  margin: 2rem 0 1rem;
+}
+
+.portfolio-content p {
+  margin-bottom: 1.5rem;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 2rem 0;
+}
+
+.tech-tag {
+  background: var(--light);
+  color: var(--text-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.project-links {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.project-link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: opacity 0.3s ease;
+}
+
+.project-link:hover {
+  opacity: 0.9;
+}
+</style>
+
+<article class="portfolio-detail">
+  <header class="portfolio-header">
+    <h1>{{ page.title }}</h1>
+    <div class="portfolio-meta">
+      {% if page.date %}
+      <time datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: "%B %d, %Y" }}
+      </time>
+      {% endif %}
+    </div>
+    {% if page.technologies %}
+    <div class="technologies">
+      {% for tech in page.technologies %}
+        <span class="tech-tag">{{ tech }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </header>
+
+  {% if page.image %}
+  <div class="portfolio-image">
+    <img src="{{ page.image }}" alt="{{ page.title }}">
+  </div>
+  {% endif %}
+
+  <div class="portfolio-content">
+    {{ content }}
+  </div>
+
+  <div class="project-links">
+    {% if page.project_url %}
+    <a href="{{ page.project_url }}" class="project-link" target="_blank">View Live Project</a>
+    {% endif %}
+    {% if page.github_url %}
+    <a href="{{ page.github_url }}" class="project-link" target="_blank">View on GitHub</a>
+    {% endif %}
+  </div>
+</article>
