@@ -1,8 +1,8 @@
-- title: home
+- title: beranda
   url: /
   external: false
 
-- title: archive
+- title: arsip
   url: /archive/
   external: false
 
@@ -10,6 +10,6 @@
   url: /portfolio/
   external: false
 
-- title: about
+- title: tentang saya
   url: /about/
   external: false
