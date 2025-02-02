@@ -45,7 +45,7 @@ comments: false
 }
 
 .portfolio-content {
-  padding: 1.5rem;
+  padding-top: 1.5rem;
 }
 
 .portfolio-content h2 {
@@ -66,8 +66,8 @@ comments: false
 
 .tech-tag {
   background: var(--light);
-  color: var(--text-primary);
-  padding: 0.25rem 0.75rem;
+  color: var(--text-secondary);
+  padding: 0.25rem 0.75rem 0.25rem 0;
   border-radius: 15px;
   font-size: 0.875rem;
 }
