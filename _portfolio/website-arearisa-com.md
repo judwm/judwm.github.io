@@ -1,7 +1,7 @@
 ---
 layout: portfolio-detail
 title: "Website: arearisa.com"
-description: Menjalankan optimasi SEO dan konten pada blog arearisa.com
+description:
 image: /assets/uploads/screenshot-2025-02-02-120844.png
 project_url: https://arearisa.com/
 technologies:
