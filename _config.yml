@@ -3,26 +3,26 @@ title: Judith's Profile & Micro-Blog
 description: Another Judithya Dwimanda's Blog
 lang: id-ID
 timezone: Asia/Jakarta
-image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
+image: assets/img/profile.webp
 repo: https://github.com/judwm/judwm.github.io
 mode: dark
 
 # Profile settings
 author:
   name: Judith Я Dwimanda
-  bio: SEO Specialist | Content Writer | Production Planner & Inventory Control
+  bio: SEO Specialist | Content Writer | Production Planner & Inventory Control | Hobbyist Analyst
   username: judwm
   github: judwm
-  twitter: twitter_username # twitter username
+  twitter: twitter_username
   facebook: j2manda
   email: the.wimanda@gmail.com
-  avatar: /assets/img/avatar.jpg # change with your own avatar
+  avatar: /assets/img/profile.webp
 
 # URL settings
 url: "https://judwm.netlify.app" #
 baseurl:
 permalink: /:title/
-google_analytics: # leave it blank if not wish
+google_analytics:
 fb_appid:
 
 # Collection setting
