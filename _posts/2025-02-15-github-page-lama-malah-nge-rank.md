@@ -6,4 +6,4 @@ tags:
   - github
 image: /assets/uploads/screenshot-2025-02-15-102544.png
 ---
-Github page 5 tahun lalu malah dinaikin. Mau di redirect ke sini, tapi sudah lupa akunnya.
+Github page 5 tahun lalu malah dinaikin. Mau di-*redirect* ke sini, tapi harus verifikasi email. *Surprisingly*, email @live.com yang dipake, sudah gak bisa dibuka sama sekali.
