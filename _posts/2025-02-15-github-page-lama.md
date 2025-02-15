@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Github Page Lama Malah Nge-Rank
 date: 2025-02-15T10:22:00.000Z
 tags:
