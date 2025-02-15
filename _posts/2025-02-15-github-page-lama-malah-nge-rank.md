@@ -3,6 +3,7 @@ layout: post
 title: Github Page Lama Malah Nge-Rank
 date: 2025-02-15T10:22:00.000Z
 tags:
+  - blog
   - github
 image: /assets/uploads/screenshot-2025-02-15-102544.png
 ---
